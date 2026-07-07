@@ -4,12 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yared Teshome | Senior Full-Stack AI Engineer & Multi-Agent Architect</title>
+    
+    <!-- SEO Metadata -->
+    <meta name="description" content="Portfolio of Yared Teshome, Senior Full-Stack AI Engineer & Multi-Agent Architect based in Addis Ababa, Ethiopia. Specializing in Next.js, LangGraph, RAG, and deterministic AI systems.">
+    <meta name="keywords" content="AI Engineer, Full-Stack Developer, LangGraph, Next.js, RAG, Prompt Engineer, Python, FastAPI, Addis Ababa, Ethiopia">
+    <meta property="og:title" content="Yared Teshome | Senior Full-Stack AI Engineer & Multi-Agent Architect">
+    <meta property="og:description" content="Engineering deterministic agentic state machines and high-performance full-stack web applications.">
+    <meta property="og:type" content="website">
+    
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Chart.js for data visualization -->
+    <!-- Chart.js for beautiful performance visualization -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!-- Google Fonts: Inter & JetBrains Mono -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Google Fonts: Instrument Serif (Editorial Elegance) & Inter (Clean UI) & JetBrains Mono (Technical Details) -->
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     
     <script>
         tailwind.config = {
@@ -18,18 +27,21 @@
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
                         mono: ['JetBrains Mono', 'monospace'],
+                        serif: ['Instrument Serif', 'serif'],
                     },
                     colors: {
                         darkBg: '#030303',
                         cardBg: '#09090b',
-                        accentIndigo: '#6366f1',
+                        borderZinc: '#1f1f23',
+                        accentViolet: '#8b5cf6',
                         accentEmerald: '#10b981',
-                        accentAmber: '#f59e0b'
+                        accentTeal: '#14b8a6',
                     }
                 }
             }
         }
     </script>
+    
     <style>
         body {
             background-color: #030303;
@@ -37,241 +49,244 @@
             overflow-x: hidden;
         }
 
-        /* Ambient Glow Backdrops */
-        .glow-indigo {
-            background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+        /* Sophisticated Ambient Glow Backdrops */
+        .ambient-glow-1 {
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.08) 0%, rgba(0, 0, 0, 0) 70%);
         }
-        .glow-emerald {
-            background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+        .ambient-glow-2 {
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
         }
 
         /* Glassmorphism styling */
         .glass-panel {
-            background: rgba(15, 15, 18, 0.6);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background: rgba(9, 9, 11, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .glass-panel:hover {
-            border-color: rgba(99, 102, 241, 0.3);
-            box-shadow: 0 12px 40px -15px rgba(99, 102, 241, 0.2);
+            border-color: rgba(139, 92, 246, 0.2);
+            background: rgba(9, 9, 11, 0.85);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7);
         }
 
-        /* Dynamic Custom Scrollbar */
+        /* Custom Scrollbar */
         ::-webkit-scrollbar {
-            width: 8px;
+            width: 6px;
         }
         ::-webkit-scrollbar-track {
             background: #030303;
         }
         ::-webkit-scrollbar-thumb {
-            background: #27272a;
-            border-radius: 9999px;
+            background: #1f1f23;
+            border-radius: 999px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #3f3f46;
-        }
-
-        /* Mono typography glow */
-        .mono-glow {
-            text-shadow: 0 0 10px rgba(99, 102, 241, 0.4);
-        }
-
-        /* Custom thinking tag styling */
-        .thought-process {
-            border-left: 2px solid #3f3f46;
-            background: rgba(39, 39, 42, 0.2);
+            background: #2e2e33;
         }
 
         /* SVG Blueprint Animations */
         .blueprint-node {
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
             cursor: pointer;
         }
         .blueprint-node:hover {
-            filter: drop-shadow(0px 0px 8px rgba(99, 102, 241, 0.8));
+            filter: drop-shadow(0px 0px 8px rgba(139, 92, 246, 0.5));
         }
-        .blueprint-node.active {
-            filter: drop-shadow(0px 0px 12px rgba(16, 185, 129, 0.9));
+        .blueprint-node.active rect {
+            stroke: #10b981 !important;
+            fill: rgba(16, 185, 129, 0.05) !important;
         }
         .flow-line {
-            stroke-dasharray: 8;
-            animation: dash 30s linear infinite;
+            stroke-dasharray: 6;
+            animation: flowDash 40s linear infinite;
         }
-        @keyframes dash {
+        @keyframes flowDash {
             to {
                 stroke-dashoffset: -1000;
             }
         }
+        
+        /* Smooth scale hover */
+        .hover-lift {
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-2px);
+        }
     </style>
 </head>
-<body class="antialiased font-sans selection:bg-indigo-500/30 selection:text-indigo-200">
+<body class="antialiased selection:bg-violet-500/20 selection:text-violet-200">
 
-    <!-- Global Toast Component -->
+    <!-- GLOBAL TOAST NOTIFICATION -->
     <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
         <div class="bg-zinc-950 border border-zinc-800 text-zinc-100 px-5 py-4 rounded-xl shadow-2xl flex items-center gap-3 max-w-sm">
-            <span id="toast-icon" class="text-indigo-400 text-xl">✨</span>
+            <span id="toast-icon" class="text-violet-400 text-lg">✨</span>
             <div>
                 <p id="toast-message" class="text-sm font-medium">Notification triggered!</p>
             </div>
         </div>
     </div>
 
-    <nav class="fixed top-0 w-full z-40 border-b border-zinc-900/80 bg-black/75 backdrop-blur-md">
-        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+    <!-- NAVIGATION HEADER -->
+    <nav class="fixed top-0 w-full z-40 border-b border-zinc-900/40 bg-black/50 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="flex items-center gap-2">
-                <a href="#" class="text-lg font-bold tracking-tight text-white flex items-center gap-1.5">
-                    <span class="font-mono text-indigo-500 font-extrabold">&lt;</span>
-                    YARED<span class="text-indigo-500">.</span>TESHOME
-                    <span class="font-mono text-indigo-500 font-extrabold">/&gt;</span>
+                <a href="#" class="text-sm font-bold tracking-tight text-white flex items-center gap-1.5 font-mono">
+                    <span class="text-violet-500 font-extrabold">&lt;</span>
+                    YARED<span class="text-zinc-500">.</span>TESHOME
+                    <span class="text-violet-500 font-extrabold">/&gt;</span>
                 </a>
             </div>
 
             <!-- Desktop Menu -->
-            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-zinc-400">
-                <a href="#sandbox" class="hover:text-white transition-colors">AI Sandbox</a>
+            <div class="hidden lg:flex items-center space-x-8 text-xs font-medium tracking-wider text-zinc-400 uppercase">
+                <a href="#about" class="hover:text-white transition-colors">Core Strategy</a>
                 <a href="#blueprint" class="hover:text-white transition-colors">Architecture Map</a>
-                <a href="#services" class="hover:text-white transition-colors">Services</a>
-                <a href="#work" class="hover:text-white transition-colors">Featured Work</a>
-                <a href="#about" class="hover:text-white transition-colors">About</a>
+                <a href="#sandbox" class="hover:text-white transition-colors">Client Sandbox</a>
+                <a href="#work" class="hover:text-white transition-colors">Case Studies</a>
+                <a href="#insights" class="hover:text-white transition-colors">Insights</a>
                 <div class="h-4 w-px bg-zinc-800"></div>
-                <!-- Dynamic Time Indicator for Addis Ababa -->
-                <div class="flex items-center gap-2 text-xs font-mono text-zinc-500">
-                    <span>ADDIS ABABA, ET</span>
-                    <span id="local-time" class="text-zinc-300">04:26:00 PM</span>
-                    <span class="relative flex h-2.5 w-2.5">
+                
+                <!-- Dynamic Local Time Indicator for Addis Ababa -->
+                <div class="flex items-center gap-2 text-[10px] font-mono text-zinc-500 normal-case">
+                    <span>ADDIS ABABA, ET (GMT+3)</span>
+                    <span id="local-time" class="text-zinc-300">--:--:-- --</span>
+                    <span class="relative flex h-2 w-2">
                         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                     </span>
                 </div>
-                <a href="#contact" class="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg transition-all text-xs font-semibold tracking-wide shadow-lg shadow-indigo-600/20 hover:scale-[1.02]">
-                    Hire Me
+                
+                <a href="#contact" class="px-5 py-2.5 bg-zinc-900 hover:bg-zinc-850 text-white rounded-lg border border-zinc-800/85 transition-all text-[11px] font-semibold tracking-wider hover:scale-[1.02]">
+                    Technical Intake
                 </a>
             </div>
 
             <!-- Mobile Menu Toggle Button -->
-            <button class="md:hidden text-zinc-400 hover:text-white transition-colors" onclick="toggleMobileMenu()">
+            <button class="lg:hidden text-zinc-400 hover:text-white transition-colors" onclick="toggleMobileMenu()">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
         </div>
 
         <!-- Mobile Dropdown Menu -->
-        <div id="mobile-menu" class="hidden border-b border-zinc-900 bg-black/95 p-6 space-y-4 md:hidden">
+        <div id="mobile-menu" class="hidden border-b border-zinc-900 bg-black/95 p-6 space-y-4 lg:hidden">
             <div class="flex items-center justify-between pb-3 border-b border-zinc-900">
-                <span class="text-xs font-mono text-zinc-500">LOCAL TIME: <span id="mobile-local-time" class="text-zinc-300">04:26 PM</span></span>
-                <span class="text-xs bg-emerald-500/10 text-emerald-400 px-2 py-0.5 rounded font-mono">AVAILABLE NOW</span>
+                <span class="text-[11px] font-mono text-zinc-500">WORKSPACE TIME: <span id="mobile-local-time" class="text-zinc-300">--:-- --</span></span>
+                <span class="text-xs bg-emerald-500/10 text-emerald-400 px-2 py-0.5 rounded font-mono">ACTIVE NOW</span>
             </div>
-            <a href="#sandbox" class="block text-zinc-400 hover:text-white transition-colors" onclick="toggleMobileMenu()">AI Sandbox</a>
+            <a href="#about" class="block text-zinc-400 hover:text-white transition-colors" onclick="toggleMobileMenu()">Core Strategy</a>
             <a href="#blueprint" class="block text-zinc-400 hover:text-white transition-colors" onclick="toggleMobileMenu()">Architecture Map</a>
-            <a href="#services" class="block text-zinc-400 hover:text-white transition-colors" onclick="toggleMobileMenu()">Services</a>
-            <a href="#work" class="block text-zinc-400 hover:text-white transition-colors" onclick="toggleMobileMenu()">Featured Work</a>
-            <a href="#about" class="block text-zinc-400 hover:text-white transition-colors" onclick="toggleMobileMenu()">About</a>
-            <a href="#contact" class="block w-full text-center px-4 py-3 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl transition-all text-sm font-semibold" onclick="toggleMobileMenu()">
-                Hire Me
+            <a href="#sandbox" class="block text-zinc-400 hover:text-white transition-colors" onclick="toggleMobileMenu()">Client Sandbox</a>
+            <a href="#work" class="block text-zinc-400 hover:text-white transition-colors" onclick="toggleMobileMenu()">Case Studies</a>
+            <a href="#insights" class="block text-zinc-400 hover:text-white transition-colors" onclick="toggleMobileMenu()">Insights</a>
+            <a href="#contact" class="block w-full text-center px-4 py-3 bg-zinc-900 border border-zinc-800 text-white rounded-xl transition-all text-sm font-semibold" onclick="toggleMobileMenu()">
+                Technical Intake
             </a>
         </div>
     </nav>
 
-    <header class="relative pt-36 pb-24 px-6 overflow-hidden min-h-screen flex items-center">
-        <!-- Glow accents -->
-        <div class="absolute top-20 left-1/4 w-[500px] h-[500px] glow-indigo rounded-full pointer-events-none"></div>
-        <div class="absolute bottom-10 right-1/4 w-[400px] h-[400px] glow-emerald rounded-full pointer-events-none"></div>
+    <!-- HERO SECTION -->
+    <header class="relative pt-32 pb-20 px-6 overflow-hidden min-h-screen flex items-center">
+        <!-- Glow backdrops -->
+        <div class="absolute top-20 left-1/4 w-[600px] h-[600px] ambient-glow-1 rounded-full pointer-events-none"></div>
+        <div class="absolute bottom-10 right-1/4 w-[500px] h-[500px] ambient-glow-2 rounded-full pointer-events-none"></div>
 
         <div class="max-w-7xl mx-auto w-full relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             <!-- Left Info Block -->
             <div class="lg:col-span-7 space-y-8">
-                <div class="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full border border-indigo-500/20 bg-indigo-500/5 text-indigo-300 text-xs font-mono">
+                <div class="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full border border-violet-500/20 bg-violet-500/5 text-violet-300 text-xs font-mono">
                     <span class="relative flex h-2 w-2">
-                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-violet-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-violet-500"></span>
                     </span>
-                    <span>Q3/Q4 2026 SYSTEMS DESIGN OPEN</span>
+                    <span>Q3 2026 CLIENT INTAKE ACTIVE</span>
                 </div>
 
-                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.1] text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-100 to-zinc-500">
-                    Engineering Deterministic AI Agents & Flawless Full-Stack Systems.
+                <h1 class="text-5xl md:text-7xl font-light tracking-tight leading-[1.05] text-white">
+                    Engineering <span class="font-serif italic font-normal text-violet-400">Deterministic</span> AI Agents & Full-Stack Systems.
                 </h1>
 
                 <p class="text-lg text-zinc-400 max-w-2xl leading-relaxed">
-                    I am <strong class="text-white font-medium">Yared Teshome</strong>. I build state-machine multi-agent systems, secure RAG database layers, and high-performance, real-time React & Next.js cloud platforms that automate complex enterprise operations.
+                    I design robust, loop-based state machines, high-performance RAG schemas, and modern Next.js/Python cloud networks that translate volatile LLM capabilities into predictable, production-grade enterprise assets.
                 </p>
 
                 <!-- Core Technical Focus Badges -->
-                <div class="flex flex-wrap gap-2.5 pt-2">
-                    <span class="px-3 py-1 bg-zinc-900 border border-zinc-800 rounded-md font-mono text-xs text-zinc-400">#LangGraph_Orchestrations</span>
-                    <span class="px-3 py-1 bg-zinc-900 border border-zinc-800 rounded-md font-mono text-xs text-zinc-400">#NextJS_16_Streaming</span>
-                    <span class="px-3 py-1 bg-zinc-900 border border-zinc-800 rounded-md font-mono text-xs text-zinc-400">#Vector_DB_RAG_Pipelines</span>
-                    <span class="px-3 py-1 bg-zinc-900 border border-zinc-800 rounded-md font-mono text-xs text-zinc-400">#Python_FastAPI</span>
+                <div class="flex flex-wrap gap-2 pt-2">
+                    <span class="px-3 py-1 bg-zinc-950 border border-zinc-900 rounded-md font-mono text-xs text-zinc-400">#LangGraph_StateMachines</span>
+                    <span class="px-3 py-1 bg-zinc-950 border border-zinc-900 rounded-md font-mono text-xs text-zinc-400">#Production_RAG_Pipelines</span>
+                    <span class="px-3 py-1 bg-zinc-950 border border-zinc-900 rounded-md font-mono text-xs text-zinc-400">#NextJS_AppRouter_ServerActions</span>
+                    <span class="px-3 py-1 bg-zinc-950 border border-zinc-900 rounded-md font-mono text-xs text-zinc-400">#FastAPI_Microservices</span>
                 </div>
 
                 <!-- Call to actions -->
                 <div class="flex flex-col sm:flex-row gap-4 pt-4">
-                    <a href="#contact" class="px-8 py-4 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold rounded-xl text-center shadow-xl shadow-indigo-600/25 transition-all hover:scale-[1.01] flex items-center justify-center gap-2">
+                    <a href="#contact" class="px-8 py-4 bg-violet-600 hover:bg-violet-500 text-white font-semibold rounded-xl text-center shadow-xl shadow-violet-600/20 transition-all hover:scale-[1.01] flex items-center justify-center gap-2 text-sm tracking-wide">
                         <span>Deploy an Agent with Me</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                     </a>
-                    <a href="#sandbox" class="px-8 py-4 bg-zinc-900/80 hover:bg-zinc-900 border border-zinc-800 text-zinc-300 font-semibold rounded-xl text-center transition-all flex items-center justify-center gap-2">
+                    <a href="#sandbox" class="px-8 py-4 bg-zinc-900/80 hover:bg-zinc-900 border border-zinc-800 text-zinc-300 font-semibold rounded-xl text-center transition-all flex items-center justify-center gap-2 text-sm">
                         <span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                        <span>Launch Sandbox Simulator</span>
+                        <span>Launch Workspace Sandbox</span>
                     </a>
                 </div>
 
-                <!-- Trust signal lines -->
+                <!-- Trust signals/Metrics -->
                 <div class="grid grid-cols-3 gap-6 pt-8 border-t border-zinc-900 max-w-xl">
                     <div>
-                        <p class="text-2xl font-bold font-mono text-white">90%</p>
-                        <p class="text-xs text-zinc-500 uppercase tracking-wider">API OpEx Reduction</p>
+                        <p class="text-3xl font-light font-mono text-white">90%</p>
+                        <p class="text-[10px] text-zinc-500 uppercase tracking-widest mt-1">API OpEx Reduction</p>
                     </div>
                     <div>
-                        <p class="text-2xl font-bold font-mono text-white">Sub-100ms</p>
-                        <p class="text-xs text-zinc-500 uppercase tracking-wider">Gateway Latency</p>
+                        <p class="text-3xl font-light font-mono text-white">Sub-100ms</p>
+                        <p class="text-[10px] text-zinc-500 uppercase tracking-widest mt-1">Gateway Latency</p>
                     </div>
                     <div>
-                        <p class="text-2xl font-bold font-mono text-white">10k+</p>
-                        <p class="text-xs text-zinc-500 uppercase tracking-wider">Hours Tuning Models</p>
+                        <p class="text-3xl font-light font-mono text-white">100%</p>
+                        <p class="text-[10px] text-zinc-500 uppercase tracking-widest mt-1">Deterministic Output</p>
                     </div>
                 </div>
             </div>
 
             <!-- Right Visual Panel: Live Terminal Dashboard Preview -->
             <div class="lg:col-span-5 relative">
-                <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-indigo-500/20 to-emerald-500/10 blur-xl opacity-75"></div>
-                <div class="relative bg-zinc-950 border border-zinc-800/80 rounded-2xl p-6 overflow-hidden shadow-2xl space-y-4">
+                <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-violet-500/20 to-emerald-500/10 blur-xl opacity-75"></div>
+                <div class="relative bg-zinc-950 border border-zinc-900/80 rounded-2xl p-6 overflow-hidden shadow-2xl space-y-4">
                     <!-- Title Bar -->
                     <div class="flex items-center justify-between border-b border-zinc-900 pb-3">
                         <div class="flex items-center gap-2">
-                            <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
-                            <span class="w-3 h-3 rounded-full bg-yellow-500/80"></span>
-                            <span class="w-3 h-3 rounded-full bg-green-500/80"></span>
-                            <span class="text-xs font-mono text-zinc-500 ml-2">agentic-core.sh</span>
+                            <span class="w-2.5 h-2.5 rounded-full bg-zinc-800"></span>
+                            <span class="w-2.5 h-2.5 rounded-full bg-zinc-800"></span>
+                            <span class="w-2.5 h-2.5 rounded-full bg-zinc-800"></span>
+                            <span class="text-[11px] font-mono text-zinc-500 ml-2">agentic-orchestrator.sh</span>
                         </div>
-                        <span class="text-xs font-mono text-zinc-600">v3.1.26</span>
+                        <span class="text-[10px] font-mono text-zinc-600">v4.0.0</span>
                     </div>
 
                     <!-- Display Box -->
                     <div class="font-mono text-xs space-y-3">
-                        <p class="text-zinc-500"># Establishing remote orchestration links...</p>
-                        <p class="text-indigo-400">Region Coordinate: <span class="text-zinc-300">Addis Ababa Gateway</span></p>
-                        <p class="text-emerald-400">Pipeline Module: <span class="text-zinc-300">LangGraph Critic Loop</span></p>
+                        <p class="text-zinc-500"># Mapping cloud gateway networks...</p>
+                        <p class="text-violet-400">Addis Ababa Core Gateway: <span class="text-zinc-300">ACTIVE</span></p>
+                        <p class="text-emerald-400">Evaluation Node Status: <span class="text-zinc-300">STABLE</span></p>
                         
                         <!-- Mini terminal visual block -->
-                        <div class="bg-black/60 p-3 rounded border border-zinc-900 space-y-1.5 text-zinc-400 leading-relaxed">
-                            <p class="text-zinc-500">&gt; check-agent-state --critic</p>
-                            <p class="text-zinc-300"><span class="text-amber-500">[INFO]</span> Executing DSPy prompt optimization...</p>
-                            <p class="text-zinc-300"><span class="text-indigo-500">[SYSTEM]</span> Critic evaluated prompt validation context.</p>
-                            <p class="text-emerald-400">✓ Optimization cycle complete: Zero hallucinations, tokens minimized.</p>
+                        <div class="bg-black/65 p-4 rounded-xl border border-zinc-900/60 space-y-1.5 text-zinc-400 leading-relaxed">
+                            <p class="text-zinc-500">&gt; check-orchestrator-state</p>
+                            <p class="text-zinc-300"><span class="text-amber-500">[WARN]</span> Parsing schema mismatch resolved.</p>
+                            <p class="text-zinc-300"><span class="text-violet-500">[SYSTEM]</span> Compiled LangGraph state machine.</p>
+                            <p class="text-emerald-400">✓ Operational check complete: Zero structural drift detected.</p>
                         </div>
 
                         <!-- System Core Memory Load -->
-                        <div class="space-y-1 pt-2">
+                        <div class="space-y-1.5 pt-2">
                             <div class="flex justify-between text-[10px] text-zinc-500">
                                 <span>ORCHESTRATOR COMPILATION LATENCY</span>
-                                <span class="text-emerald-400">88ms</span>
+                                <span class="text-emerald-400">82ms</span>
                             </div>
-                            <div class="w-full bg-zinc-900 h-1.5 rounded-full overflow-hidden">
-                                <div class="bg-indigo-500 h-full w-[91%] rounded-full"></div>
+                            <div class="w-full bg-zinc-900 h-1 rounded-full overflow-hidden">
+                                <div class="bg-violet-500 h-full w-[94%] rounded-full"></div>
                             </div>
                         </div>
                     </div>
@@ -280,90 +295,180 @@
         </div>
     </header>
 
-    <section id="blueprint" class="py-20 px-6 border-t border-zinc-900 bg-zinc-950/20 relative">
+    <!-- CORE STRATEGY & ABOUT ME -->
+    <section id="about" class="py-24 px-6 border-t border-zinc-900 bg-zinc-950/20">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+                
+                <!-- Left Title column -->
+                <div class="lg:col-span-5 space-y-6 lg:sticky lg:top-28">
+                    <span class="text-[10px] font-mono text-violet-400 uppercase tracking-widest">COGNITIVE PHILOSOPHY</span>
+                    <h2 class="text-4xl md:text-5xl font-light tracking-tight text-white leading-tight">
+                        Moving beyond basic wrappers to <span class="font-serif italic text-violet-400">deterministic engineering</span>.
+                    </h2>
+                    <p class="text-zinc-400 leading-relaxed text-sm">
+                        I sit at the intersection of logical engineering structures and semantic AI model parameters. Every model is useless without dynamic interfaces; every interface is optimized with systematic, autonomous execution capabilities.
+                    </p>
+                    
+                    <div class="p-5 border border-zinc-900 rounded-xl bg-zinc-950/40 space-y-3">
+                        <span class="text-[10px] font-mono text-zinc-500 uppercase tracking-wider block">THE LOCAL ADVANTAGE</span>
+                        <p class="text-xs text-zinc-400 leading-relaxed">
+                            Operating from Addis Ababa, Ethiopia, allows me to provide globally competitive rates while maintaining complete overlap with US and European core development sprints.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right Cards column -->
+                <div class="lg:col-span-7 space-y-8">
+                    
+                    <!-- Bio card -->
+                    <div class="glass-panel rounded-2xl p-8 space-y-6">
+                        <h3 class="text-xl font-semibold text-white">The Engineer Behind the Engines</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">
+                            I am <strong class="text-white font-medium">Yared Teshome</strong>. As an AI Prompt Architect and Full-Stack Developer, I realize that building predictable applications requires rigorous state structures. I design software loops that evaluate outputs, self-correct errors, preserve context memory, and safely perform external API integrations.
+                        </p>
+                        
+                        <div class="grid grid-cols-2 gap-4 pt-2 text-xs font-mono">
+                            <div class="p-3 bg-zinc-950/80 border border-zinc-900/50 rounded-xl">
+                                <span class="text-zinc-500 block">DEDICATED STACK</span>
+                                <span class="text-white font-semibold">TypeScript & Python</span>
+                            </div>
+                            <div class="p-3 bg-zinc-950/80 border border-zinc-900/50 rounded-xl">
+                                <span class="text-zinc-500 block">ORCHESTRATOR</span>
+                                <span class="text-white font-semibold">LangGraph & FastAPI</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bento-Grid Core Principles -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Card 1 -->
+                        <div class="p-6 border border-zinc-900 bg-zinc-950/60 rounded-xl space-y-3">
+                            <span class="text-xs font-mono text-violet-400">01 / DETERMINISTIC FLOWS</span>
+                            <h4 class="text-base font-semibold text-white">No Arbitrary Generatives</h4>
+                            <p class="text-zinc-400 text-xs leading-relaxed">
+                                I configure multi-turn agent networks with strict JSON schemas and state evaluations to prevent model hallucination entirely.
+                            </p>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="p-6 border border-zinc-900 bg-zinc-950/60 rounded-xl space-y-3">
+                            <span class="text-xs font-mono text-emerald-400">02 / OPEX COST OPTIMIZATION</span>
+                            <h4 class="text-base font-semibold text-white">Efficient Prompt Compiler</h4>
+                            <p class="text-zinc-400 text-xs leading-relaxed">
+                                By utilizing few-shot formatting rules and token-aware caching configurations, I reduce overall client API expenditures by up to 90%.
+                            </p>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="p-6 border border-zinc-900 bg-zinc-950/60 rounded-xl space-y-3">
+                            <span class="text-xs font-mono text-zinc-500">03 / REAL-TIME STREAMING UX</span>
+                            <h4 class="text-base font-semibold text-white">Edge Handlers</h4>
+                            <p class="text-zinc-400 text-xs leading-relaxed">
+                                Sub-100ms client visualization speeds leveraging Next.js Edge route processing streams and server-sent client event protocols.
+                            </p>
+                        </div>
+                        <!-- Card 4 -->
+                        <div class="p-6 border border-zinc-900 bg-zinc-950/60 rounded-xl space-y-3">
+                            <span class="text-xs font-mono text-zinc-500">04 / CUSTOM INTEGRATION</span>
+                            <h4 class="text-base font-semibold text-white">System Agnostic</h4>
+                            <p class="text-zinc-400 text-xs leading-relaxed">
+                                Seamless API link deployments matching your existing corporate stacks, legacy PostgreSQL servers, and cloud configurations.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE ARCHITECTURE BLUEPRINT -->
+    <section id="blueprint" class="py-24 px-6 border-t border-zinc-900 relative">
         <div class="max-w-7xl mx-auto">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-xs font-mono text-indigo-400 uppercase tracking-widest">TECHNICAL SHOWCASE & PATTERNS</span>
-                <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-white mt-2">Multi-Agent Orchestration Blueprint</h2>
+                <span class="text-[10px] font-mono text-violet-400 uppercase tracking-widest">TECHNICAL DEEP DIVE</span>
+                <h2 class="text-4xl md:text-5xl font-light tracking-tight text-white mt-2">Multi-Agent State Blueprint</h2>
                 <p class="text-zinc-400 mt-3 text-sm leading-relaxed">
-                    Unlike simple linear chatbots, I build deterministic, loop-based multi-agent state machines. Click on any step in this dynamic architecture diagram to inspect its underlying code, configurations, and core specifications.
+                    I construct strict, self-correcting logic structures instead of simple chatbot loops. Click on any system stage below to analyze its corresponding production configuration schema.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-                <!-- SVG Blueprint Visual Column -->
-                <div class="lg:col-span-7 bg-zinc-950/80 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-center items-center shadow-xl min-h-[420px]">
-                    <span class="text-xs font-mono text-zinc-500 mb-6 block self-start">INTERACTIVE SYSTEM FLOW MAP:</span>
+                
+                <!-- SVG Interactive Column -->
+                <div class="lg:col-span-7 bg-zinc-950 border border-zinc-900 rounded-2xl p-6 flex flex-col justify-center items-center shadow-2xl min-h-[440px]">
+                    <span class="text-[10px] font-mono text-zinc-500 mb-6 block self-start">INTERACTIVE SYSTEM FLOW MAP:</span>
                     
                     <!-- SVG Flow Graph -->
                     <svg class="w-full h-auto max-w-lg" viewBox="0 0 600 360" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Background connections -->
-                        <path d="M 50 180 H 150" stroke="#27272a" stroke-width="2" class="flow-line" />
-                        <path d="M 150 180 Q 200 100 250 100" stroke="#27272a" stroke-width="2" class="flow-line" />
-                        <path d="M 150 180 Q 200 260 250 260" stroke="#27272a" stroke-width="2" class="flow-line" />
-                        <path d="M 250 100 H 350" stroke="#27272a" stroke-width="2" class="flow-line" />
-                        <path d="M 250 260 H 350" stroke="#27272a" stroke-width="2" class="flow-line" />
-                        <path d="M 350 100 Q 400 100 450 180" stroke="#27272a" stroke-width="2" class="flow-line" />
-                        <path d="M 350 260 Q 400 260 450 180" stroke="#27272a" stroke-width="2" class="flow-line" />
-                        <path d="M 450 180 H 550" stroke="#27272a" stroke-width="2" class="flow-line" />
+                        <!-- Connections -->
+                        <path d="M 50 180 H 150" stroke="#1f1f23" stroke-width="2" class="flow-line" />
+                        <path d="M 150 180 Q 200 100 250 100" stroke="#1f1f23" stroke-width="2" class="flow-line" />
+                        <path d="M 150 180 Q 200 260 250 260" stroke="#1f1f23" stroke-width="2" class="flow-line" />
+                        <path d="M 250 100 H 350" stroke="#1f1f23" stroke-width="2" class="flow-line" />
+                        <path d="M 250 260 H 350" stroke="#1f1f23" stroke-width="2" class="flow-line" />
+                        <path d="M 350 100 Q 400 100 450 180" stroke="#1f1f23" stroke-width="2" class="flow-line" />
+                        <path d="M 350 260 Q 400 260 450 180" stroke="#1f1f23" stroke-width="2" class="flow-line" />
+                        <path d="M 450 180 H 550" stroke="#1f1f23" stroke-width="2" class="flow-line" />
                         
                         <!-- Core Loop feedback line -->
-                        <path d="M 450 180 Q 300 340 150 180" stroke="#6366f1" stroke-width="1.5" stroke-dasharray="4" class="flow-line" />
+                        <path d="M 450 180 Q 300 340 150 180" stroke="#8b5cf6" stroke-width="1.5" stroke-dasharray="4" class="flow-line" />
 
                         <!-- Node 1: Input Router -->
                         <g class="blueprint-node active" id="node-router" onclick="inspectNode('router')">
-                            <rect x="15" y="145" width="80" height="70" rx="12" fill="#09090b" stroke="#6366f1" stroke-width="2" />
+                            <rect x="15" y="145" width="80" height="70" rx="12" fill="#030303" stroke="#8b5cf6" stroke-width="2" />
                             <text x="55" y="180" fill="#fff" font-family="Inter" font-size="11" font-weight="bold" text-anchor="middle">Semantic</text>
-                            <text x="55" y="194" fill="#6366f1" font-family="JetBrains Mono" font-size="9" text-anchor="middle">Router</text>
+                            <text x="55" y="194" fill="#8b5cf6" font-family="JetBrains Mono" font-size="9" text-anchor="middle">Router</text>
                         </g>
 
                         <!-- Node 2: Agent Node (Top Branch) -->
                         <g class="blueprint-node" id="node-agent" onclick="inspectNode('agent')">
-                            <rect x="210" y="65" width="80" height="70" rx="12" fill="#09090b" stroke="#27272a" stroke-width="1.5" />
+                            <rect x="210" y="65" width="80" height="70" rx="12" fill="#030303" stroke="#1f1f23" stroke-width="1.5" />
                             <text x="250" y="100" fill="#fff" font-family="Inter" font-size="11" font-weight="bold" text-anchor="middle">Agent</text>
                             <text x="250" y="114" fill="#a1a1aa" font-family="JetBrains Mono" font-size="9" text-anchor="middle">Orchestrator</text>
                         </g>
 
                         <!-- Node 3: Vector Database Node (Bottom Branch) -->
                         <g class="blueprint-node" id="node-rag" onclick="inspectNode('rag')">
-                            <rect x="210" y="225" width="80" height="70" rx="12" fill="#09090b" stroke="#27272a" stroke-width="1.5" />
+                            <rect x="210" y="225" width="80" height="70" rx="12" fill="#030303" stroke="#1f1f23" stroke-width="1.5" />
                             <text x="250" y="260" fill="#fff" font-family="Inter" font-size="11" font-weight="bold" text-anchor="middle">Hybrid RAG</text>
                             <text x="250" y="274" fill="#a1a1aa" font-family="JetBrains Mono" font-size="9" text-anchor="middle">Supabase PG</text>
                         </g>
 
                         <!-- Node 4: Critic Evaluator (Top Branch Right) -->
                         <g class="blueprint-node" id="node-critic" onclick="inspectNode('critic')">
-                            <rect x="310" y="65" width="80" height="70" rx="12" fill="#09090b" stroke="#27272a" stroke-width="1.5" />
+                            <rect x="310" y="65" width="80" height="70" rx="12" fill="#030303" stroke="#1f1f23" stroke-width="1.5" />
                             <text x="350" y="100" fill="#fff" font-family="Inter" font-size="11" font-weight="bold" text-anchor="middle">Critic</text>
                             <text x="350" y="114" fill="#a1a1aa" font-family="JetBrains Mono" font-size="9" text-anchor="middle">Evaluator</text>
                         </g>
 
                         <!-- Node 5: Guardrails / Validator (Bottom Branch Right) -->
                         <g class="blueprint-node" id="node-guard" onclick="inspectNode('guard')">
-                            <rect x="310" y="225" width="80" height="70" rx="12" fill="#09090b" stroke="#27272a" stroke-width="1.5" />
+                            <rect x="310" y="225" width="80" height="70" rx="12" fill="#030303" stroke="#1f1f23" stroke-width="1.5" />
                             <text x="350" y="260" fill="#fff" font-family="Inter" font-size="11" font-weight="bold" text-anchor="middle">Guardrails</text>
                             <text x="350" y="274" fill="#a1a1aa" font-family="JetBrains Mono" font-size="9" text-anchor="middle">JSON Schema</text>
                         </g>
 
                         <!-- Node 6: Output / Execution Node -->
                         <g class="blueprint-node" id="node-output" onclick="inspectNode('output')">
-                            <rect x="500" y="145" width="80" height="70" rx="12" fill="#09090b" stroke="#27272a" stroke-width="1.5" />
+                            <rect x="500" y="145" width="80" height="70" rx="12" fill="#030303" stroke="#1f1f23" stroke-width="1.5" />
                             <text x="540" y="180" fill="#fff" font-family="Inter" font-size="11" font-weight="bold" text-anchor="middle">API Client</text>
                             <text x="540" y="194" fill="#a1a1aa" font-family="JetBrains Mono" font-size="9" text-anchor="middle">Output Stream</text>
                         </g>
                     </svg>
 
-                    <div class="mt-6 flex flex-wrap gap-4 text-xs font-mono text-zinc-400 justify-center">
-                        <span class="flex items-center gap-2"><span class="w-3.5 h-3.5 bg-indigo-500 rounded-full inline-block"></span> Click a node to inspect system configs</span>
-                        <span class="flex items-center gap-2 animate-pulse"><span class="w-3 h-3 bg-emerald-500 rounded-full inline-block"></span> Evaluation Loop Active</span>
+                    <div class="mt-6 flex flex-wrap gap-4 text-xs font-mono text-zinc-500 justify-center">
+                        <span class="flex items-center gap-2"><span class="w-3 h-3 bg-violet-500 rounded-full inline-block"></span> Click a node to view code configuration</span>
+                        <span class="flex items-center gap-2 animate-pulse"><span class="w-2.5 h-2.5 bg-emerald-500 rounded-full inline-block"></span> Loop Process Active</span>
                     </div>
                 </div>
 
+                <!-- Inspect Sidebar Detail Column -->
                 <div class="lg:col-span-5 glass-panel rounded-2xl p-6 flex flex-col justify-between shadow-xl">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between border-b border-zinc-900 pb-3">
-                            <span id="inspect-title" class="text-sm font-bold text-indigo-400 font-mono uppercase tracking-wider">Node: Semantic Router</span>
-                            <span class="text-xs bg-indigo-500/10 text-indigo-400 px-2 py-0.5 rounded font-mono">STATUS: DETERMINISTIC</span>
+                            <span id="inspect-title" class="text-xs font-bold text-violet-400 font-mono uppercase tracking-wider">Node: Semantic Router</span>
+                            <span class="text-[10px] bg-violet-500/10 text-violet-400 px-2 py-0.5 rounded font-mono">STRICT SCHEMA</span>
                         </div>
                         
                         <p id="inspect-desc" class="text-zinc-400 text-xs leading-relaxed">
@@ -372,7 +477,7 @@
 
                         <!-- Node Code Block display -->
                         <div class="space-y-2">
-                            <span class="text-[10px] font-mono text-zinc-500 block">UNDERLYING CONFIG / SOURCE SCHEMA:</span>
+                            <span class="text-[9px] font-mono text-zinc-500 block uppercase">SCHEMA SOURCE CODE:</span>
                             <pre id="inspect-code" class="bg-black/80 border border-zinc-900 rounded-lg p-3 text-[11px] text-emerald-400 font-mono overflow-x-auto whitespace-pre leading-relaxed max-h-56">class SemanticRouter(BaseModel):
     routes: List[RoutePattern] = [
         {"intent": "db_query", "target": "rag_search"},
@@ -384,121 +489,123 @@
                     </div>
 
                     <div class="border-t border-zinc-900 pt-4 mt-6 flex justify-between items-center">
-                        <span class="text-xs font-mono text-zinc-500">Framework: Python, Pydantic, DSPy</span>
-                        <button onclick="copyBlueprintCode()" class="text-xs text-indigo-400 hover:text-indigo-300 font-mono flex items-center gap-1.5 transition-colors">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
-                            <span>Copy Schema</span>
+                        <span class="text-[10px] font-mono text-zinc-500">Language: Python, Pydantic</span>
+                        <button onclick="copyBlueprintCode()" class="text-xs text-violet-400 hover:text-violet-300 font-mono flex items-center gap-1.5 transition-colors">
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
+                            <span>Copy Config</span>
                         </button>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <section id="sandbox" class="py-24 px-6 border-t border-zinc-900 relative">
-        <div class="absolute inset-0 bg-gradient-to-b from-indigo-500/5 via-transparent to-transparent pointer-events-none"></div>
-        <div class="max-w-6xl mx-auto">
+    <!-- CLIENT COGNITIVE SANDBOX -->
+    <section id="sandbox" class="py-24 px-6 border-t border-zinc-900">
+        <div class="max-w-7xl mx-auto">
             
             <!-- Header Block -->
             <div class="text-center max-w-2xl mx-auto mb-12">
-                <span class="text-xs font-mono text-indigo-400 uppercase tracking-widest">LIVE DEVELOPMENT SANDBOX</span>
-                <h2 class="text-3xl md:text-4xl font-bold tracking-tight mt-2 text-white">Cognitive Code Sandbox</h2>
+                <span class="text-[10px] font-mono text-violet-400 uppercase tracking-widest">LIVE DEVELOPMENT SANDBOX</span>
+                <h2 class="text-4xl font-light tracking-tight text-white mt-2">Active Prompt Sandbox</h2>
                 <p class="text-zinc-400 mt-3 text-sm leading-relaxed">
-                    Test Yared's dynamic model configurations in real-time. Prompt the sandbox to generate complete Next.js streaming code, state configurations, or audit complex prompt architectures.
+                    Review and test actual production-grade system configurations. Direct the code compiler or interview the custom Digital twin grounded directly in Yared's architecture methodologies.
                 </p>
             </div>
 
             <!-- Terminal Platform Container -->
-            <div class="glass-panel rounded-2xl overflow-hidden border border-zinc-800/80 shadow-2xl">
+            <div class="glass-panel rounded-2xl overflow-hidden border border-zinc-900/80 shadow-2xl">
                 <!-- Sandbox Toolbar controls -->
                 <div class="bg-zinc-950/90 border-b border-zinc-900 px-5 py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                     <!-- Simulation Controller Tabs -->
-                    <div class="flex bg-black p-1 rounded-lg border border-zinc-800/60 text-xs">
-                        <button onclick="switchSandboxTab('optimize')" id="tab-optimize" class="px-4 py-2 rounded-md font-semibold transition-all bg-indigo-600 text-white flex items-center gap-2">
-                            ⚡ Code Generator
+                    <div class="flex bg-black p-1 rounded-lg border border-zinc-800/60 text-xs font-mono">
+                        <button onclick="switchSandboxTab('optimize')" id="tab-optimize" class="px-4 py-2 rounded-md font-semibold transition-all bg-violet-600 text-white flex items-center gap-2">
+                            ⚡ System Compiler
                         </button>
                         <button onclick="switchSandboxTab('agent')" id="tab-agent" class="px-4 py-2 rounded-md font-semibold transition-all text-zinc-400 hover:text-zinc-200 flex items-center gap-2">
-                            🤖 AI Partner Twin
+                            🤖 Interactive Partner Twin
                         </button>
                     </div>
 
                     <!-- Optional custom key configurations -->
-                    <div class="flex items-center gap-2 text-xs font-mono text-zinc-400">
-                        <label for="custom-key" class="hidden sm:inline">Use Custom Gemini API Key (Optional):</label>
-                        <input type="password" id="custom-key" placeholder="Defaults to Simulated Engine" class="bg-zinc-900 border border-zinc-800 text-zinc-200 rounded-lg px-3 py-1.5 w-48 focus:outline-none focus:border-indigo-500 text-[11px] placeholder-zinc-700">
+                    <div class="flex items-center gap-2 text-[10px] font-mono text-zinc-400">
+                        <label for="custom-key" class="hidden sm:inline">User Gemini API Key (Optional):</label>
+                        <input type="password" id="custom-key" placeholder="Runs on Internal Simulation Engine" class="bg-zinc-900 border border-zinc-800 text-zinc-200 rounded-lg px-3 py-1.5 w-52 focus:outline-none focus:border-violet-500 text-[10px] placeholder-zinc-700">
                     </div>
                 </div>
 
                 <!-- Simulation Main Body Panel -->
                 <div class="p-6 bg-black/40 min-h-[440px] flex flex-col justify-between">
                     
-                    <!-- TAB 1: Real-time Code Generator Interface -->
+                    <!-- TAB 1: System Compiler Interface -->
                     <div id="panel-optimize" class="space-y-4">
                         <p class="text-zinc-400 text-xs leading-relaxed">
-                            Request complex full-stack web architectures, Python LangGraph loops, or deterministic system schemas. The sandbox compiles actual code files optimized for immediate cloud deployment.
+                            Input your target architectural goals (e.g. FastAPI edge streaming routing pipelines or pydantic data schemas). The system validates syntax parameters, structures error controls, and compiles a comprehensive blueprint block.
                         </p>
 
                         <!-- Source input field -->
                         <div class="space-y-2">
-                            <label class="text-xs font-mono text-zinc-500 uppercase tracking-wider block">Target Architecture Goals</label>
-                            <textarea id="raw-prompt" placeholder="e.g., Create a robust Next.js route handler for processing streaming LLM API responses..." class="w-full h-24 bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-sm text-zinc-200 focus:outline-none focus:border-indigo-500 placeholder-zinc-700 transition-colors resize-none"></textarea>
+                            <label class="text-[10px] font-mono text-zinc-500 uppercase tracking-wider block">Target Architecture Goals</label>
+                            <textarea id="raw-prompt" placeholder="Describe the required software route, state model, or systemic instructions..." class="w-full h-24 bg-zinc-950 border border-zinc-850 rounded-xl px-4 py-3 text-sm text-zinc-200 focus:outline-none focus:border-violet-500 placeholder-zinc-700 transition-colors resize-none font-mono"></textarea>
                         </div>
 
                         <!-- Quick suggestion templates -->
                         <div class="flex flex-wrap gap-2">
-                            <button onclick="loadDemoPrompt('Generate a python system state class configuration for a LangGraph multi-agent support team loops')" class="text-[11px] bg-zinc-900/60 border border-zinc-800/80 text-zinc-400 hover:text-white px-3 py-1.5 rounded-lg transition-colors">🐍 LangGraph Loop Config</button>
-                            <button onclick="loadDemoPrompt('Create a robust Next.js API route handler for processing streaming LLM responses safely with readable streams')" class="text-[11px] bg-zinc-900/60 border border-zinc-800/80 text-zinc-400 hover:text-white px-3 py-1.5 rounded-lg transition-colors">⚡ Next.js Stream handler</button>
-                            <button onclick="loadDemoPrompt('Design a structured JSON output response schema for strict customer booking lead details')" class="text-[11px] bg-zinc-900/60 border border-zinc-800/80 text-zinc-400 hover:text-white px-3 py-1.5 rounded-lg transition-colors">📊 Pydantic Schema Model</button>
+                            <button onclick="loadDemoPrompt('Generate a python system state class configuration for a LangGraph multi-agent support team loop.')" class="text-[10px] font-mono bg-zinc-950 border border-zinc-900 text-zinc-400 hover:text-white px-3 py-1.5 rounded-lg transition-colors">🐍 LangGraph State Machine</button>
+                            <button onclick="loadDemoPrompt('Create a robust Next.js API route handler for processing streaming LLM responses safely.')" class="text-[10px] font-mono bg-zinc-950 border border-zinc-900 text-zinc-400 hover:text-white px-3 py-1.5 rounded-lg transition-colors">⚡ Next.js API Streamer</button>
+                            <button onclick="loadDemoPrompt('Design a structured JSON output schema for strict customer booking lead details.')" class="text-[10px] font-mono bg-zinc-950 border border-zinc-900 text-zinc-400 hover:text-white px-3 py-1.5 rounded-lg transition-colors">📊 Pydantic Schema Model</button>
                         </div>
 
                         <!-- Process button trigger -->
                         <div class="flex justify-end pt-2">
-                            <button onclick="executeOptimize()" class="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs rounded-xl shadow-lg shadow-indigo-600/20 flex items-center gap-2 transition-all">
-                                🚀 Process Prompt Upgrade
+                            <button onclick="executeOptimize()" class="px-6 py-3 bg-violet-600 hover:bg-violet-500 text-white font-semibold text-xs rounded-xl shadow-lg shadow-violet-600/20 flex items-center gap-2 transition-all">
+                                🚀 Process Pipeline Upgrade
                             </button>
                         </div>
 
                         <!-- Simulated Structured Output Console -->
                         <div id="optimize-result-box" class="hidden mt-4 bg-zinc-950 border border-zinc-900 rounded-xl p-5 relative">
                             <div class="flex items-center justify-between mb-3 pb-2 border-b border-zinc-900">
-                                <span class="text-[10px] font-mono text-emerald-400 tracking-widest uppercase">COGNITIVE COMPILING ENGINE v2.2</span>
-                                <button onclick="copyOutputText('optimized-content-box')" class="text-[11px] font-mono text-indigo-400 hover:text-indigo-300 flex items-center gap-1.5">
+                                <span class="text-[9px] font-mono text-emerald-400 tracking-widest uppercase">COMPILING DIRECTIVE PROTOCOL V4.0</span>
+                                <button onclick="copyOutputText('optimized-content-box')" class="text-[10px] font-mono text-violet-400 hover:text-violet-300 flex items-center gap-1.5">
                                     <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
-                                    <span>Copy Blueprint Code</span>
+                                    <span>Copy Output Code</span>
                                 </button>
                             </div>
                             <!-- Output text block -->
-                            <pre id="optimized-content-box" class="text-[11px] md:text-xs text-zinc-300 font-mono overflow-x-auto whitespace-pre-wrap leading-relaxed max-h-72"></pre>
+                            <pre id="optimized-content-box" class="text-[11px] text-zinc-300 font-mono overflow-x-auto whitespace-pre-wrap leading-relaxed max-h-72"></pre>
                         </div>
                     </div>
 
+                    <!-- TAB 2: Digital Twin Interface -->
                     <div id="panel-agent" class="hidden space-y-4">
                         <p class="text-zinc-400 text-xs leading-relaxed">
-                            Interact with a live representation of Yared's digital profile. Ask questions regarding his engineering rates, availability, stack preferences, or dynamic Addis Ababa background.
+                            Interact with an authorized digital version of Yared's technical operations. Inquire about pricing packages, stack preferences, or dynamic regional operations setup.
                         </p>
 
                         <!-- Agentic conversation display thread -->
-                        <div id="agent-chat-thread" class="bg-black/40 border border-zinc-900 rounded-xl p-4 space-y-4 max-h-[300px] overflow-y-auto font-mono text-xs leading-relaxed scroll-smooth">
+                        <div id="agent-chat-thread" class="bg-black/40 border border-zinc-900/60 rounded-xl p-4 space-y-4 max-h-[300px] overflow-y-auto font-mono text-xs leading-relaxed scroll-smooth">
                             <div class="flex gap-3">
-                                <div class="flex-shrink-0 w-6 h-6 rounded bg-indigo-950 border border-indigo-800 text-indigo-400 flex items-center justify-center font-bold">AI</div>
-                                <div class="text-zinc-300 bg-zinc-900/40 border border-zinc-800/40 p-3 rounded-lg max-w-[85%]">
-                                    System Active. Hello, I am Yared's simulated digital twin. Ask me about his software projects, full-stack configurations, or multi-agent LangGraph engineering!
+                                <div class="flex-shrink-0 w-6 h-6 rounded bg-violet-950/50 border border-violet-850 text-violet-400 flex items-center justify-center font-bold text-[9px]">AI</div>
+                                <div class="text-zinc-300 bg-zinc-900/40 border border-zinc-900/50 p-3 rounded-lg max-w-[85%]">
+                                    Digital Instance Compiled. Operational. Ask me about Yared's development capabilities, multi-agent frameworks, or cloud network implementations.
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Interactive prompt queries -->
+                        <!-- Preloaded contextual buttons -->
                         <div class="flex flex-wrap gap-2">
-                            <button onclick="askAgentQuestion('What is Yared\'s primary development stack and tech specialties?')" class="text-[11px] bg-zinc-900/60 border border-zinc-800/80 text-zinc-400 hover:text-white px-2.5 py-1.5 rounded-lg transition-colors">⚙️ Tech Specialties</button>
-                            <button onclick="askAgentQuestion('How much does Yared charge for full-stack AI development projects?')" class="text-[11px] bg-zinc-900/60 border border-zinc-800/80 text-zinc-400 hover:text-white px-2.5 py-1.5 rounded-lg transition-colors">💰 Pricing & Rates</button>
-                            <button onclick="askAgentQuestion('Is Yared available for remote work with international clients?')" class="text-[11px] bg-zinc-900/60 border border-zinc-800/80 text-zinc-400 hover:text-white px-2.5 py-1.5 rounded-lg transition-colors">🌍 Remote Availability</button>
+                            <button onclick="askAgentQuestion('What is Yared\'s primary developer tech stack and specialties?')" class="text-[10px] font-mono bg-zinc-950 border border-zinc-900 text-zinc-400 hover:text-white px-2.5 py-1.5 rounded-lg transition-colors">🛠️ Tech Specialties</button>
+                            <button onclick="askAgentQuestion('What are Yared\'s remote contract rates and booking structure?')" class="text-[10px] font-mono bg-zinc-950 border border-zinc-900 text-zinc-400 hover:text-white px-2.5 py-1.5 rounded-lg transition-colors">💼 Contract Rates</button>
+                            <button onclick="askAgentQuestion('How does Yared handle remote project overlap from Addis Ababa?')" class="text-[10px] font-mono bg-zinc-950 border border-zinc-900 text-zinc-400 hover:text-white px-2.5 py-1.5 rounded-lg transition-colors">🌍 Timezone Overlap</button>
                         </div>
 
                         <!-- Chat input execution field -->
                         <div class="flex gap-2.5 pt-2">
-                            <input type="text" id="agent-chat-input" placeholder="Type an inquiry about Yared..." onkeypress="handleChatPress(event)" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-xs text-zinc-200 focus:outline-none focus:border-indigo-500 placeholder-zinc-700 transition-colors">
-                            <button onclick="executeAgentQuery()" class="px-5 bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs rounded-xl shadow-lg shadow-indigo-600/20 transition-all flex items-center justify-center">
-                                Query
+                            <input type="text" id="agent-chat-input" placeholder="Query Yared's operational assistant..." onkeypress="handleChatPress(event)" class="w-full bg-zinc-950 border border-zinc-900 rounded-xl px-4 py-3 text-xs text-zinc-200 focus:outline-none focus:border-violet-500 placeholder-zinc-700 transition-colors font-mono">
+                            <button onclick="executeAgentQuery()" class="px-5 bg-violet-600 hover:bg-violet-500 text-white font-bold text-xs rounded-xl shadow-lg shadow-violet-600/20 transition-all flex items-center justify-center font-mono">
+                                Submit
                             </button>
                         </div>
                     </div>
@@ -506,11 +613,10 @@
                     <!-- Immersive Processing Loader Panel -->
                     <div id="sandbox-loader" class="hidden mt-4 bg-zinc-950 border border-zinc-900 p-4 rounded-xl flex items-center justify-between">
                         <div class="flex items-center gap-3">
-                            <!-- Spinner visual -->
-                            <div class="w-4.5 h-4.5 border-2 border-indigo-500 border-t-transparent rounded-full animate-spin"></div>
-                            <span class="text-xs text-zinc-400 font-mono animate-pulse">Running cognitive reasoning sequence...</span>
+                            <div class="w-4 h-4 border-2 border-violet-500 border-t-transparent rounded-full animate-spin"></div>
+                            <span class="text-[10px] text-zinc-400 font-mono animate-pulse uppercase tracking-wider">Evaluating token-level routing sequence...</span>
                         </div>
-                        <span id="sandbox-latency-counter" class="text-xs text-zinc-500 font-mono">0.0s</span>
+                        <span id="sandbox-latency-counter" class="text-[11px] text-zinc-500 font-mono">0.0s</span>
                     </div>
 
                 </div>
@@ -518,85 +624,102 @@
         </div>
     </section>
 
+    <!-- SERVICES BENTO GRID -->
     <section id="services" class="py-24 px-6 relative border-t border-zinc-900">
         <div class="max-w-7xl mx-auto">
             
-            <!-- Bento grid header context -->
+            <!-- Bento grid header -->
             <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
                 <div class="max-w-xl">
-                    <span class="text-xs font-mono text-indigo-400 uppercase tracking-widest">TECHNICAL CAPABILITIES</span>
-                    <h2 class="text-3xl md:text-5xl font-bold tracking-tight mt-2 text-white">Elite Freelance AI Services</h2>
+                    <span class="text-[10px] font-mono text-violet-400 uppercase tracking-widest">TECHNICAL SPECTRUM</span>
+                    <h2 class="text-4xl md:text-5xl font-light tracking-tight text-white mt-2">Specialized Architecture Frameworks</h2>
                     <p class="text-zinc-400 mt-3 text-sm leading-relaxed">
-                        I engineer robust digital architectures. From deep LLM configurations to cloud-deployed Next.js platforms, I build systems optimized for performance, deterministic reliability, and scale.
+                        I build custom integration patterns matching strict operational standards. No general integrations; strictly measurable system optimizations.
                     </p>
                 </div>
-                <div class="text-xs font-mono text-zinc-500 tracking-widest">02 // SERVICES Matrix</div>
+                <div class="text-[10px] font-mono text-zinc-500 tracking-widest uppercase">02 // SERVICES PORTAL</div>
             </div>
 
-            <!-- Bento Layout System -->
+            <!-- Bento Layout -->
             <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
                 
-                <!-- Bento Block 1: Large Left Panel for Prompt Engineering -->
+                <!-- Bento Block 1: Advanced Prompting -->
                 <div class="md:col-span-8 glass-panel rounded-3xl p-8 flex flex-col justify-between min-h-[350px]">
                     <div class="space-y-4">
-                        <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-xl">💡</div>
-                        <h3 class="text-2xl font-bold text-white tracking-tight">AI Prompt Engineering & Cognitive Pipelines</h3>
-                        <p class="text-zinc-400 text-sm max-w-xl leading-relaxed">
-                            Stop relying on simple linear prompts. I construct highly reliable system instructions, multi-turn state variables, dynamic semantic intent routers, and strict JSON outputs engineered to prevent hallucination and secure token usage efficiency.
+                        <div class="w-10 h-10 rounded-xl bg-violet-500/10 border border-violet-500/20 flex items-center justify-center text-sm font-mono text-violet-400">💡</div>
+                        <h3 class="text-xl font-semibold text-white tracking-tight">Structured Cognitive Prompt Pipelines</h3>
+                        <p class="text-zinc-400 text-xs leading-relaxed max-w-xl">
+                            Designing few-shot template variables, pydantic parsing models, and semantic routing trees that turn unstructured inputs into strict, programmatic data files.
                         </p>
+                        <ul class="text-[11px] text-zinc-500 font-mono space-y-1.5">
+                            <li>🎯 Goal: Absolute deterministic formatting</li>
+                            <li>💰 Outcome: Up to 90% reduction in average API spend</li>
+                        </ul>
                     </div>
                     
                     <div class="mt-8 flex flex-wrap gap-2 border-t border-zinc-900 pt-6">
-                        <span class="text-xs font-mono bg-zinc-900 border border-zinc-800 px-3 py-1.5 rounded-full text-zinc-400">Pydantic Schemas</span>
-                        <span class="text-xs font-mono bg-zinc-900 border border-zinc-800 px-3 py-1.5 rounded-full text-zinc-400">DSPy Compiler Optimization</span>
-                        <span class="text-xs font-mono bg-zinc-900 border border-zinc-800 px-3 py-1.5 rounded-full text-zinc-400">Few-Shot Formatting Rules</span>
+                        <span class="text-[10px] font-mono bg-zinc-950 border border-zinc-900 px-3 py-1.5 rounded-full text-zinc-400">DSPy Auto-Optimization</span>
+                        <span class="text-[10px] font-mono bg-zinc-950 border border-zinc-900 px-3 py-1.5 rounded-full text-zinc-400">Structured Pydantic Outliners</span>
+                        <span class="text-[10px] font-mono bg-zinc-950 border border-zinc-900 px-3 py-1.5 rounded-full text-zinc-400">Token-Aware Caching Rules</span>
                     </div>
                 </div>
 
-                <!-- Bento Block 2: Short Right Panel for Full-Stack -->
+                <!-- Bento Block 2: Full Stack -->
                 <div class="md:col-span-4 glass-panel rounded-3xl p-8 flex flex-col justify-between min-h-[350px]">
                     <div class="space-y-4">
-                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-xl">⚡</div>
-                        <h3 class="text-xl font-bold text-white tracking-tight">Full-Stack Next.js Platforms</h3>
-                        <p class="text-zinc-400 text-sm leading-relaxed">
-                            Sub-100ms response layouts engineered with robust TypeScript patterns, real-time streaming interfaces, custom API route structures, and optimized server action components.
+                        <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-sm font-mono text-emerald-400">⚡</div>
+                        <h3 class="text-xl font-semibold text-white tracking-tight">Production Full-Stack</h3>
+                        <p class="text-zinc-400 text-xs leading-relaxed">
+                            Developing sub-100ms loading user interfaces styled with pristine Tailwind designs and integrated directly with Vercel edge routes.
                         </p>
+                        <ul class="text-[11px] text-zinc-500 font-mono space-y-1.5">
+                            <li>🎯 Goal: Seamless UI rendering latency</li>
+                            <li>💰 Outcome: Perfect core web performance scores</li>
+                        </ul>
                     </div>
                     
-                    <div class="mt-4 pt-4 border-t border-zinc-900 text-xs font-mono text-zinc-500">
-                        Vercel edge functions, Redis states, Postgres DB setups.
+                    <div class="mt-4 pt-4 border-t border-zinc-900 text-[10px] font-mono text-zinc-500 uppercase tracking-wider">
+                        Next.js Server Actions, Redis, PostgreSQL.
                     </div>
                 </div>
 
-                <!-- Bento Block 3: Bottom Left panel for Automation -->
+                <!-- Bento Block 3: Automations -->
                 <div class="md:col-span-4 glass-panel rounded-3xl p-8 flex flex-col justify-between min-h-[350px]">
                     <div class="space-y-4">
-                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-xl">⚙️</div>
-                        <h3 class="text-xl font-bold text-white tracking-tight">Multi-Agent State Orchestrators</h3>
-                        <p class="text-zinc-400 text-sm leading-relaxed">
-                            I build custom state graph architectures utilizing Python LangGraph. Our systems support multi-agent collaboration, memory preservation, human-in-the-loop triggers, and complex background routing logic.
+                        <div class="w-10 h-10 rounded-xl bg-teal-500/10 border border-teal-500/20 flex items-center justify-center text-sm font-mono text-teal-400">⚙️</div>
+                        <h3 class="text-xl font-semibold text-white tracking-tight">Multi-Agent Loops</h3>
+                        <p class="text-zinc-400 text-xs leading-relaxed">
+                            Formulating background multi-agent pipelines leveraging state memory systems, self-evaluation cycles, and database sync handlers.
                         </p>
+                        <ul class="text-[11px] text-zinc-500 font-mono space-y-1.5">
+                            <li>🎯 Goal: Reliable autonomous execution</li>
+                            <li>💰 Outcome: Minimal human-in-the-loop dependencies</li>
+                        </ul>
                     </div>
                     
-                    <div class="mt-4 pt-4 border-t border-zinc-900 text-xs font-mono text-zinc-500">
-                        Self-evaluating agent patterns & critical analysis chains.
+                    <div class="mt-4 pt-4 border-t border-zinc-900 text-[10px] font-mono text-zinc-500 uppercase tracking-wider">
+                        LangGraph Graphs, FastAPI gateway nodes.
                     </div>
                 </div>
 
-                <!-- Bento Block 4: Bottom Right panel for Custom AI Tools -->
+                <!-- Bento Block 4: Micro-SaaS -->
                 <div class="md:col-span-8 glass-panel rounded-3xl p-8 flex flex-col justify-between min-h-[350px]">
                     <div class="space-y-4">
-                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-xl">🚀</div>
-                        <h3 class="text-2xl font-bold text-white tracking-tight">Custom AI Tools & Micro-SaaS Blueprints</h3>
-                        <p class="text-zinc-400 text-sm max-w-xl leading-relaxed">
-                            Have proprietary organizational workflows? I transform business data structures into monetizable SaaS platforms featuring secure customer stripe integrations, multi-user authentication layers, and detailed usage statistics.
+                        <div class="w-10 h-10 rounded-xl bg-violet-500/10 border border-violet-500/20 flex items-center justify-center text-sm font-mono text-violet-400">🚀</div>
+                        <h3 class="text-xl font-semibold text-white tracking-tight">Custom Micro-SaaS & API Integration</h3>
+                        <p class="text-zinc-400 text-xs leading-relaxed max-w-xl">
+                            Packaging legacy organizational datasets into modern, monetize-ready subscription applications featuring secure user authentication nodes and detailed usage tracking modules.
                         </p>
+                        <ul class="text-[11px] text-zinc-500 font-mono space-y-1.5">
+                            <li>🎯 Goal: Deployable custom platform MVP</li>
+                            <li>💰 Outcome: Clear operational metrics validation</li>
+                        </ul>
                     </div>
                     
                     <div class="mt-8 flex flex-wrap gap-2 border-t border-zinc-900 pt-6">
-                        <span class="text-xs font-mono bg-zinc-900 border border-zinc-800 px-3 py-1.5 rounded-full text-zinc-400">Stripe Billing Networks</span>
-                        <span class="text-xs font-mono bg-zinc-900 border border-zinc-800 px-3 py-1.5 rounded-full text-zinc-400">Supabase Auth Systems</span>
-                        <span class="text-xs font-mono bg-zinc-900 border border-zinc-800 px-3 py-1.5 rounded-full text-zinc-400">API token credit trackers</span>
+                        <span class="text-[10px] font-mono bg-zinc-950 border border-zinc-900 px-3 py-1.5 rounded-full text-zinc-400">Stripe Billing Nodes</span>
+                        <span class="text-[10px] font-mono bg-zinc-950 border border-zinc-900 px-3 py-1.5 rounded-full text-zinc-400">Supabase Security Layers</span>
+                        <span class="text-[10px] font-mono bg-zinc-950 border border-zinc-900 px-3 py-1.5 rounded-full text-zinc-400">Dynamic User Tokens</span>
                     </div>
                 </div>
 
@@ -604,26 +727,31 @@
         </div>
     </section>
 
-    <section class="py-20 px-6 bg-zinc-950/40 border-t border-zinc-900">
+    <!-- METRICS DATA SHOWCASE -->
+    <section class="py-24 px-6 bg-zinc-950/40 border-t border-zinc-900">
         <div class="max-w-7xl mx-auto">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
-                <!-- Text Data block -->
+                <!-- Copy block -->
                 <div class="lg:col-span-5 space-y-6">
-                    <span class="text-xs font-mono text-emerald-400 uppercase tracking-widest">QUANTIFIABLE METRICS</span>
-                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white leading-tight">Data-Backed Business Optimization Results</h2>
+                    <span class="text-[10px] font-mono text-emerald-400 uppercase tracking-widest">QUANTIFIABLE METRICS</span>
+                    <h2 class="text-4xl font-light tracking-tight text-white leading-tight">Data-Backed Pipeline Optimizations</h2>
                     <p class="text-zinc-400 text-sm leading-relaxed">
-                        I focus strictly on business metrics that move the needle. Here is the typical transformation metric of systems optimized with semantic architectures and structured LLM prompt strategies:
+                        I focus strictly on architectural efficiency. Through strict system instructions, precise pydantic schemas, and local RAG parsing networks, I target clear operational cost drops:
                     </p>
                     
                     <div class="space-y-4 pt-2">
                         <div class="flex items-start gap-3">
-                            <span class="text-indigo-400 mt-1">✔</span>
-                            <p class="text-zinc-300 text-sm font-medium"><strong class="text-white">API Token Reduction:</strong> Structured Prompting lowers total token spending by up to 90% by enforcing strict formatting rules.</p>
+                            <span class="text-violet-400 mt-1">✔</span>
+                            <p class="text-zinc-300 text-xs leading-relaxed">
+                                <strong class="text-white">API Token Reduction:</strong> Structured formatting lowers total token spending by up to 90% by enforcing strict schema parameters.
+                            </p>
                         </div>
                         <div class="flex items-start gap-3">
-                            <span class="text-indigo-400 mt-1">✔</span>
-                            <p class="text-zinc-300 text-sm font-medium"><strong class="text-white">Processing Time Cut:</strong> Integrating background agents reduces manual triage work with immediate execution.</p>
+                            <span class="text-violet-400 mt-1">✔</span>
+                            <p class="text-zinc-300 text-xs leading-relaxed">
+                                <strong class="text-white">Execution Time Decrease:</strong> Background multi-agent routing cuts down core execution durations.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -631,8 +759,8 @@
                 <!-- Graphic Chart block -->
                 <div class="lg:col-span-7 bg-zinc-950 border border-zinc-900 rounded-2xl p-6 shadow-xl relative">
                     <div class="flex items-center justify-between mb-6 pb-2 border-b border-zinc-900">
-                        <span class="text-xs font-mono text-zinc-500">OPERATIONAL PERFORMANCE OVERVIEW</span>
-                        <span class="text-xs bg-indigo-500/10 text-indigo-400 px-2 py-0.5 rounded font-mono">AFTER OPTIMIZATION</span>
+                        <span class="text-[10px] font-mono text-zinc-500">OPERATIONAL PERFORMANCE OVERVIEW</span>
+                        <span class="text-[10px] bg-violet-500/10 text-violet-400 px-2 py-0.5 rounded font-mono">OPTIMIZED STATUS</span>
                     </div>
                     <div class="relative w-full h-80">
                         <canvas id="metricsChart"></canvas>
@@ -643,14 +771,15 @@
         </div>
     </section>
 
+    <!-- CASE STUDIES SECTION -->
     <section id="work" class="py-24 px-6 border-t border-zinc-900">
         <div class="max-w-7xl mx-auto">
             
             <div class="text-center max-w-2xl mx-auto mb-16">
-                <span class="text-xs font-mono text-indigo-400 uppercase tracking-widest">PROVED PROJECTS CASE STUDIES</span>
-                <h2 class="text-3xl md:text-5xl font-bold tracking-tight mt-2 text-white">Advanced System Pipelines</h2>
+                <span class="text-[10px] font-mono text-violet-400 uppercase tracking-widest">VERIFIED DEPLOYMENTS</span>
+                <h2 class="text-4xl md:text-5xl font-light tracking-tight mt-2 text-white">System Case Studies</h2>
                 <p class="text-zinc-400 mt-3 text-sm leading-relaxed">
-                    A demonstration of clean architecture combined with high cognitive intelligence.
+                    Analyzing real-world organizational challenges resolved with clean development architectures.
                 </p>
             </div>
 
@@ -658,13 +787,13 @@
                 
                 <!-- Project card 1 -->
                 <div class="group cursor-pointer">
-                    <div class="relative aspect-[16/10] bg-zinc-950 border border-zinc-900 hover:border-indigo-500/20 rounded-2xl p-8 flex flex-col justify-between overflow-hidden shadow-xl transition-all duration-300">
+                    <div class="relative aspect-[16/10] bg-zinc-950 border border-zinc-900 hover:border-violet-500/20 rounded-2xl p-8 flex flex-col justify-between overflow-hidden shadow-xl hover-lift">
                         <!-- Background Glow Accent -->
-                        <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-indigo-500/5 rounded-full blur-xl group-hover:bg-indigo-500/10 transition-all"></div>
+                        <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-violet-500/5 rounded-full blur-xl group-hover:bg-violet-500/10 transition-all"></div>
                         
                         <div class="space-y-4">
-                            <span class="text-xs font-mono text-zinc-500 uppercase tracking-wider block">CASE STUDY // 01</span>
-                            <h3 class="text-2xl font-bold text-white tracking-tight group-hover:text-indigo-400 transition-colors">Enterprise Multi-Agent Support Triaging</h3>
+                            <span class="text-[10px] font-mono text-zinc-500 uppercase tracking-wider block">CASE STUDY // 01</span>
+                            <h3 class="text-xl font-semibold text-white group-hover:text-violet-400 transition-colors">Enterprise Multi-Agent Support Triaging</h3>
                             <p class="text-zinc-400 text-xs leading-relaxed max-w-md">
                                 Replaced manual support workflow queue triage with a structured system designed in LangGraph. The agent retrieves from documentation databases, evaluates inquiries, drafts replies, and acts autonomously.
                             </p>
@@ -673,12 +802,12 @@
                         <!-- Results/Metrics layout -->
                         <div class="grid grid-cols-2 gap-4 border-t border-zinc-900 pt-6 mt-8">
                             <div>
-                                <span class="text-2xl font-bold font-mono text-indigo-400">82%</span>
-                                <span class="block text-[10px] text-zinc-500 uppercase tracking-wide">Faster Customer Replies</span>
+                                <span class="text-2xl font-bold font-mono text-violet-400">82%</span>
+                                <span class="block text-[9px] text-zinc-500 uppercase tracking-wide mt-1">Faster Customer Replies</span>
                             </div>
                             <div>
                                 <span class="text-2xl font-bold font-mono text-emerald-400">45%</span>
-                                <span class="block text-[10px] text-zinc-500 uppercase tracking-wide">Autonomous Ticket Resolution</span>
+                                <span class="block text-[9px] text-zinc-500 uppercase tracking-wide mt-1">Autonomous Ticket Resolution</span>
                             </div>
                         </div>
                     </div>
@@ -686,13 +815,13 @@
 
                 <!-- Project card 2 -->
                 <div class="group cursor-pointer">
-                    <div class="relative aspect-[16/10] bg-zinc-950 border border-zinc-900 hover:border-emerald-500/20 rounded-2xl p-8 flex flex-col justify-between overflow-hidden shadow-xl transition-all duration-300">
+                    <div class="relative aspect-[16/10] bg-zinc-950 border border-zinc-900 hover:border-emerald-500/20 rounded-2xl p-8 flex flex-col justify-between overflow-hidden shadow-xl hover-lift">
                         <!-- Background Glow Accent -->
                         <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-emerald-500/5 rounded-full blur-xl group-hover:bg-emerald-500/10 transition-all"></div>
                         
                         <div class="space-y-4">
-                            <span class="text-xs font-mono text-zinc-500 uppercase tracking-wider block">CASE STUDY // 02</span>
-                            <h3 class="text-2xl font-bold text-white tracking-tight group-hover:text-emerald-400 transition-colors">Semantic AI Research & Editorial Engine</h3>
+                            <span class="text-[10px] font-mono text-zinc-500 uppercase tracking-wider block">CASE STUDY // 02</span>
+                            <h3 class="text-xl font-semibold text-white group-hover:text-emerald-400 transition-colors">Semantic AI Research & Editorial Engine</h3>
                             <p class="text-zinc-400 text-xs leading-relaxed max-w-md">
                                 Built an integrated, web-based internal dashboard featuring structured prompt layers that automatically aggregates draft files, optimizes SEO content guidelines, and parses formatted Markdown models.
                             </p>
@@ -701,12 +830,12 @@
                         <!-- Results/Metrics layout -->
                         <div class="grid grid-cols-2 gap-4 border-t border-zinc-900 pt-6 mt-8">
                             <div>
-                                <span class="text-2xl font-bold font-mono text-indigo-400">15x</span>
-                                <span class="block text-[10px] text-zinc-500 uppercase tracking-wide">Publishing Pace Speedup</span>
+                                <span class="text-2xl font-bold font-mono text-violet-400">15x</span>
+                                <span class="block text-[9px] text-zinc-500 uppercase tracking-wide mt-1">Publishing Pace Speedup</span>
                             </div>
                             <div>
                                 <span class="text-2xl font-bold font-mono text-emerald-400">300%</span>
-                                <span class="block text-[10px] text-zinc-500 uppercase tracking-wide">Content Production Scale</span>
+                                <span class="block text-[9px] text-zinc-500 uppercase tracking-wide mt-1">Content Production Scale</span>
                             </div>
                         </div>
                     </div>
@@ -716,120 +845,60 @@
         </div>
     </section>
 
-    <section class="py-20 px-6 bg-zinc-950 border-t border-zinc-900">
+    <!-- THOUGHT LEADERSHIP SECTION -->
+    <section id="insights" class="py-24 px-6 border-t border-zinc-900 bg-zinc-950/10">
         <div class="max-w-7xl mx-auto">
-            <div class="text-center max-w-xl mx-auto mb-12">
-                <span class="text-xs font-mono text-indigo-400 uppercase tracking-widest">TECHNICAL STACK</span>
-                <h2 class="text-2xl md:text-3xl font-bold text-white mt-1">Architectural Specializations</h2>
-            </div>
-
-            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 font-mono text-xs">
-                <!-- Stack item 1 -->
-                <div class="bg-zinc-900/40 border border-zinc-800 p-4 rounded-xl text-center space-y-2">
-                    <span class="text-lg block">TypeScript</span>
-                    <span class="text-[10px] text-zinc-500">Frameworks: React, Next.js</span>
-                </div>
-                <!-- Stack item 2 -->
-                <div class="bg-zinc-900/40 border border-zinc-800 p-4 rounded-xl text-center space-y-2">
-                    <span class="text-lg block">Python</span>
-                    <span class="text-[10px] text-zinc-500">Frameworks: FastAPI, DSPy</span>
-                </div>
-                <!-- Stack item 3 -->
-                <div class="bg-zinc-900/40 border border-zinc-800 p-4 rounded-xl text-center space-y-2">
-                    <span class="text-lg block">LangGraph</span>
-                    <span class="text-[10px] text-zinc-500">Task loops & State Nodes</span>
-                </div>
-                <!-- Stack item 4 -->
-                <div class="bg-zinc-900/40 border border-zinc-800 p-4 rounded-xl text-center space-y-2">
-                    <span class="text-lg block">Supabase</span>
-                    <span class="text-[10px] text-zinc-500">Databases: Auth, pgvector</span>
-                </div>
-                <!-- Stack item 5 -->
-                <div class="bg-zinc-900/40 border border-zinc-800 p-4 rounded-xl text-center space-y-2">
-                    <span class="text-lg block">Tailwind CSS</span>
-                    <span class="text-[10px] text-zinc-500">Responsive UX Layouts</span>
-                </div>
-                <!-- Stack item 6 -->
-                <div class="bg-zinc-900/40 border border-zinc-800 p-4 rounded-xl text-center space-y-2">
-                    <span class="text-lg block">Docker</span>
-                    <span class="text-[10px] text-zinc-500">Container Deployments</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="py-24 px-6 border-t border-zinc-900 relative">
-        <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
-            <!-- Bio Profile Text Panel -->
-            <div class="lg:col-span-7 space-y-6">
-                <span class="text-xs font-mono text-indigo-400 uppercase tracking-widest">THE MIND BEHIND THE ENGINES</span>
-                <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white">Yared Teshome</h2>
-                <p class="text-zinc-400 text-sm leading-relaxed">
-                    Based in Addis Ababa, Ethiopia, I work with innovative startups, SaaS founders, and operations leaders across the globe to architect deterministic software and cognitive systems.
-                </p>
-                <p class="text-zinc-400 text-sm leading-relaxed">
-                    As models evolve rapidly, building clean integration layers and precise system engineering grows increasingly essential. My unique approach leverages my experience as both a **Full-Stack Software Engineer** and an **AI Prompt Engineer**. I build the logic loops, the agent state machines, and the beautiful user interfaces that make software useful.
-                </p>
-
-                <!-- Signature Stats table -->
-                <div class="grid grid-cols-2 gap-4 pt-4 text-xs font-mono">
-                    <div class="p-3 bg-zinc-950 border border-zinc-900 rounded-xl">
-                        <span class="text-zinc-500 block">AVAILABILITY</span>
-                        <span class="text-emerald-400 font-semibold uppercase tracking-wide">READY FOR Q3 CONTRACTS</span>
-                    </div>
-                    <div class="p-3 bg-zinc-950 border border-zinc-900 rounded-xl">
-                        <span class="text-zinc-500 block">DEDICATED REMOTE</span>
-                        <span class="text-white font-semibold">ALL TIME ZONES SUPPORTED</span>
-                    </div>
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
+                <div class="max-w-xl">
+                    <span class="text-[10px] font-mono text-violet-400 uppercase tracking-widest">THOUGHT LEADERSHIP</span>
+                    <h2 class="text-4xl md:text-5xl font-light tracking-tight text-white mt-2">Insights & Systems Auditing</h2>
+                    <p class="text-zinc-400 mt-3 text-sm leading-relaxed">
+                        I write highly technical, actionable guides exploring the mechanics of multi-agent state machines, API gateways, and production-level AI architecture.
+                    </p>
                 </div>
+                <div class="text-[10px] font-mono text-zinc-500 tracking-widest uppercase">04 // INSIGHTS MATRIX</div>
             </div>
 
-            <!-- Stylized Image Placeholder or Brand Card -->
-            <div class="lg:col-span-5">
-                <div class="relative bg-gradient-to-br from-indigo-950 to-zinc-950 border border-zinc-800 rounded-2xl p-8 text-center space-y-6 shadow-2xl overflow-hidden">
-                    <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
-                    
-                    <!-- Decorative Avatar Block -->
-                    <div class="relative inline-block mx-auto">
-                        <div class="w-24 h-24 rounded-full bg-gradient-to-tr from-indigo-500 to-emerald-400 flex items-center justify-center text-4xl font-bold text-white shadow-xl">
-                            YT
-                        </div>
-                        <div class="absolute bottom-1 right-1 w-5.5 h-5.5 bg-emerald-500 border-4 border-zinc-950 rounded-full"></div>
-                    </div>
-
-                    <div class="space-y-2">
-                        <h4 class="text-lg font-bold text-white">Yared Teshome</h4>
-                        <p class="text-xs font-mono text-indigo-400">Addis Ababa, Ethiopia</p>
-                    </div>
-
-                    <!-- Tech checklist -->
-                    <div class="space-y-2.5 text-xs text-zinc-400 font-mono text-left bg-black/40 p-4 rounded-xl border border-zinc-900/60">
-                        <div class="flex items-center gap-2">
-                            <span class="text-indigo-400">●</span>
-                            <span>Reliable & clear bilingual communicator</span>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <span class="text-indigo-400">●</span>
-                            <span>Vercel / Next.js / React Deployment</span>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <span class="text-indigo-400">●</span>
-                            <span>API optimization, reducing OpEx token burn</span>
-                        </div>
-                    </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 font-mono">
+                <!-- Insight 1 -->
+                <div class="p-6 border border-zinc-900 bg-zinc-950/80 rounded-xl space-y-4 hover:border-violet-500/20 transition-all cursor-pointer">
+                    <span class="text-[10px] text-zinc-500 block">JULY 2026 // SYSTEM ARCHITECTURE</span>
+                    <h3 class="text-sm font-semibold text-white tracking-tight leading-relaxed">Designing Deterministic Loops in LangGraph</h3>
+                    <p class="text-zinc-500 text-[11px] leading-relaxed">
+                        A detailed analysis of building error-evaluating recursive loops inside stateful graphs to guarantee validation compliance.
+                    </p>
+                    <span class="text-violet-400 text-[11px] block">Read post ➜</span>
+                </div>
+                <!-- Insight 2 -->
+                <div class="p-6 border border-zinc-900 bg-zinc-950/80 rounded-xl space-y-4 hover:border-violet-500/20 transition-all cursor-pointer">
+                    <span class="text-[10px] text-zinc-500 block">JUNE 2026 // EDGE STREAMS</span>
+                    <h3 class="text-sm font-semibold text-white tracking-tight leading-relaxed">Why Your Next.js Stream is Dropping Chunks at the Edge</h3>
+                    <p class="text-zinc-500 text-[11px] leading-relaxed">
+                        Debugging response payload delivery delays, buffering bottlenecks, and event-source chunk timeouts in Next.js App Router.
+                    </p>
+                    <span class="text-violet-400 text-[11px] block">Read post ➜</span>
+                </div>
+                <!-- Insight 3 -->
+                <div class="p-6 border border-zinc-900 bg-zinc-950/80 rounded-xl space-y-4 hover:border-violet-500/20 transition-all cursor-pointer">
+                    <span class="text-[10px] text-zinc-500 block">MAY 2026 // DATABASE OPTIMIZATION</span>
+                    <h3 class="text-sm font-semibold text-white tracking-tight leading-relaxed">Optimizing Hybrid Search: Reciprocal Rank Fusion</h3>
+                    <p class="text-zinc-500 text-[11px] leading-relaxed">
+                        Combining sparse full-text keyword indices with dense vectors inside Supabase pgvector setups for precise retrieval context.
+                    </p>
+                    <span class="text-violet-400 text-[11px] block">Read post ➜</span>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <!-- Client testimonials -->
-    <section class="py-24 px-6 border-t border-zinc-900 bg-zinc-950/25">
+    <!-- TESTIMONIALS SECTION -->
+    <section class="py-24 px-6 border-t border-zinc-900 bg-zinc-950/20">
         <div class="max-w-7xl mx-auto">
             <div class="text-center max-w-2xl mx-auto mb-16">
-                <span class="text-xs font-mono text-indigo-400 uppercase tracking-widest">STRATEGIC ALLIES TRUST</span>
-                <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white mt-2">What Clients Experience</h2>
+                <span class="text-[10px] font-mono text-violet-400 uppercase tracking-widest">CLIENT PERSPECTIVES</span>
+                <h2 class="text-4xl font-light tracking-tight text-white mt-2">What Partners Experience</h2>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -837,14 +906,14 @@
                 <!-- Testimonial card 1 -->
                 <div class="glass-panel rounded-2xl p-8 space-y-6 relative">
                     <span class="text-5xl text-zinc-800 font-serif absolute top-6 right-8 pointer-events-none">“</span>
-                    <p class="text-zinc-300 text-sm italic leading-relaxed relative z-10">
+                    <p class="text-zinc-300 text-sm italic leading-relaxed relative z-10 font-serif">
                         "Yared is a rare talent in system intelligence. He didn't just write prompts; he thoroughly analyzed our JSON data structure, reorganized our vector storage systems, and reduced our API spend by 40% in our first billing cycle."
                     </p>
                     <div class="border-t border-zinc-900/80 pt-4 flex items-center gap-3">
                         <div class="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center font-bold text-xs text-white">MT</div>
                         <div>
-                            <p class="text-sm font-semibold text-white">Marcus Thorne</p>
-                            <p class="text-[11px] text-zinc-500 font-mono">CTO, Aetheria AI SaaS</p>
+                            <p class="text-xs font-semibold text-white">Marcus Thorne</p>
+                            <p class="text-[10px] text-zinc-500 font-mono">CTO, Aetheria AI SaaS</p>
                         </div>
                     </div>
                 </div>
@@ -852,14 +921,14 @@
                 <!-- Testimonial card 2 -->
                 <div class="glass-panel rounded-2xl p-8 space-y-6 relative">
                     <span class="text-5xl text-zinc-800 font-serif absolute top-6 right-8 pointer-events-none">“</span>
-                    <p class="text-zinc-300 text-sm italic leading-relaxed relative z-10">
+                    <p class="text-zinc-300 text-sm italic leading-relaxed relative z-10 font-serif">
                         "Working with Yared was frictionless. He took our operational guidelines and built a gorgeous, lightning-fast Next.js dashboard integrating automated workflows in less than three weeks. He is our go-to partner."
                     </p>
                     <div class="border-t border-zinc-900/80 pt-4 flex items-center gap-3">
                         <div class="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center font-bold text-xs text-white">SJ</div>
                         <div>
-                            <p class="text-sm font-semibold text-white">Sarah Jenkins</p>
-                            <p class="text-[11px] text-zinc-500 font-mono">Operations Lead, OptiMedia Group</p>
+                            <p class="text-xs font-semibold text-white">Sarah Jenkins</p>
+                            <p class="text-[10px] text-zinc-500 font-mono">Operations Lead, OptiMedia Group</p>
                         </div>
                     </div>
                 </div>
@@ -868,36 +937,67 @@
         </div>
     </section>
 
-    <section id="contact" class="py-24 px-6 border-t border-zinc-900">
+    <!-- AVAILABILITY & OPERATION LEDGER -->
+    <section class="py-20 px-6 border-t border-zinc-900 bg-black">
+        <div class="max-w-4xl mx-auto glass-panel rounded-2xl p-8 md:p-10 border-zinc-900 space-y-6">
+            <div class="flex items-center gap-2">
+                <span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span class="text-[10px] font-mono text-zinc-400 uppercase tracking-widest font-semibold">Q3 2026 CONTRACT MATRIX</span>
+            </div>
+            
+            <h3 class="text-2xl font-light text-white leading-tight">Remote Operational Boundaries</h3>
+            <p class="text-zinc-400 text-xs leading-relaxed max-w-2xl">
+                I limit active engagements to guarantee dedicated focus and reliable software outputs.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4 text-xs font-mono">
+                <div class="p-4 bg-zinc-950 border border-zinc-900 rounded-xl space-y-1">
+                    <span class="text-zinc-500 block text-[9px] uppercase">CONTRACT MINIMUM</span>
+                    <span class="text-white font-semibold">$5,000 / Project</span>
+                </div>
+                <div class="p-4 bg-zinc-950 border border-zinc-900 rounded-xl space-y-1">
+                    <span class="text-zinc-500 block text-[9px] uppercase">CONSULTING RETAINER</span>
+                    <span class="text-white font-semibold">From $3,500 / Month</span>
+                </div>
+                <div class="p-4 bg-zinc-950 border border-zinc-900 rounded-xl space-y-1">
+                    <span class="text-zinc-500 block text-[9px] uppercase">OPERATIONAL OVERLAP</span>
+                    <span class="text-emerald-400 font-semibold">US / EU Sprint Aligned</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT INTAKE FORM -->
+    <section id="contact" class="py-24 px-6 border-t border-zinc-900 relative">
         <div class="max-w-4xl mx-auto">
             
-            <div class="glass-panel rounded-[2.5rem] p-8 md:p-16 border-indigo-500/10 relative overflow-hidden">
-                <div class="absolute -top-12 -left-12 w-48 h-48 bg-indigo-600/5 rounded-full blur-2xl"></div>
+            <div class="glass-panel rounded-[2.5rem] p-8 md:p-16 border-violet-500/10 relative overflow-hidden">
+                <div class="absolute -top-12 -left-12 w-48 h-48 bg-violet-600/5 rounded-full blur-2xl"></div>
                 
                 <div class="text-center space-y-4 max-w-xl mx-auto mb-12">
-                    <span class="text-xs font-mono text-indigo-400 uppercase tracking-widest">SECURE YOUR SPOT</span>
-                    <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-white leading-tight">Let's Build Something Unfairly Good</h2>
+                    <span class="text-[10px] font-mono text-violet-400 uppercase tracking-widest">SECURE YOUR INTENT SLOT</span>
+                    <h2 class="text-4xl md:text-5xl font-light tracking-tight text-white leading-tight">Start Your Technical Intake</h2>
                     <p class="text-zinc-400 text-sm leading-relaxed">
-                        I select a small number of high-quality engagements each quarter to guarantee dedicated execution and pristine results. Share your system goals below.
+                        Detail your architectural objectives and project budget below. I will personally review and send a detailed system blueprint within 24 hours.
                     </p>
                 </div>
 
-                <!-- Contact form container -->
+                <!-- Form -->
                 <form id="portfolio-contact-form" class="space-y-6 relative z-10">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div class="space-y-2">
                             <label class="text-[10px] font-mono uppercase tracking-wider text-zinc-500 font-semibold block ml-1">Your Full Name</label>
-                            <input type="text" required id="contact-name" placeholder="John Doe" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3.5 focus:outline-none focus:border-indigo-500 text-sm text-zinc-200 placeholder-zinc-800 transition-colors">
+                            <input type="text" required id="contact-name" placeholder="John Doe" class="w-full bg-zinc-950 border border-zinc-900 rounded-xl px-4 py-3.5 focus:outline-none focus:border-violet-500 text-sm text-zinc-200 placeholder-zinc-800 transition-colors">
                         </div>
                         <div class="space-y-2">
                             <label class="text-[10px] font-mono uppercase tracking-wider text-zinc-500 font-semibold block ml-1">Direct Contact Email</label>
-                            <input type="email" required id="contact-email" placeholder="john@company.com" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3.5 focus:outline-none focus:border-indigo-500 text-sm text-zinc-200 placeholder-zinc-800 transition-colors">
+                            <input type="email" required id="contact-email" placeholder="john@company.com" class="w-full bg-zinc-950 border border-zinc-900 rounded-xl px-4 py-3.5 focus:outline-none focus:border-violet-500 text-sm text-zinc-200 placeholder-zinc-800 transition-colors">
                         </div>
                     </div>
 
                     <div class="space-y-2">
-                        <label class="text-[10px] font-mono uppercase tracking-wider text-zinc-500 font-semibold block ml-1">Estimated Budget Scope</label>
-                        <select id="contact-budget" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3.5 focus:outline-none focus:border-indigo-500 text-sm text-zinc-400 transition-colors">
+                        <label class="text-[10px] font-mono uppercase tracking-wider text-zinc-500 font-semibold block ml-1">Project Scope Budget</label>
+                        <select id="contact-budget" class="w-full bg-zinc-950 border border-zinc-900 rounded-xl px-4 py-3.5 focus:outline-none focus:border-violet-500 text-sm text-zinc-400 transition-colors">
                             <option value="5k-10k" class="text-zinc-200">$5,000 - $10,000</option>
                             <option value="10k-25k" class="text-zinc-200">$10,000 - $25,000</option>
                             <option value="25k+" class="text-zinc-200">$25,000+ (High-scale implementation)</option>
@@ -906,13 +1006,13 @@
                     </div>
 
                     <div class="space-y-2">
-                        <label class="text-[10px] font-mono uppercase tracking-wider text-zinc-500 font-semibold block ml-1">Project Brief Overview</label>
-                        <textarea required id="contact-brief" placeholder="Describe the automated pipelines, interfaces, or system algorithms you aim to construct..." class="w-full h-36 bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-4 focus:outline-none focus:border-indigo-500 text-sm text-zinc-200 placeholder-zinc-800 transition-colors resize-none"></textarea>
+                        <label class="text-[10px] font-mono uppercase tracking-wider text-zinc-500 font-semibold block ml-1">Architectural Brief</label>
+                        <textarea required id="contact-brief" placeholder="Describe the automated pipelines, interfaces, or system algorithms you aim to construct..." class="w-full h-36 bg-zinc-950 border border-zinc-900 rounded-xl px-4 py-4 focus:outline-none focus:border-violet-500 text-sm text-zinc-200 placeholder-zinc-800 transition-colors resize-none"></textarea>
                     </div>
 
-                    <button type="submit" id="contact-btn" class="w-full py-4.5 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-xl transition-all shadow-xl shadow-indigo-600/20 text-sm hover:scale-[1.01] duration-200 flex items-center justify-center gap-2">
-                        <span>Deploy Project Inquiry & Secure Slot</span>
-                        <svg class="w-4.5 h-4.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    <button type="submit" id="contact-btn" class="w-full py-4 bg-violet-600 hover:bg-violet-500 text-white font-bold rounded-xl transition-all shadow-xl shadow-violet-600/20 text-xs tracking-wider uppercase hover:scale-[1.01] duration-200 flex items-center justify-center gap-2 font-mono">
+                        <span>Deploy Intake Inquiry & Secure Slot</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                     </button>
                 </form>
             </div>
@@ -920,15 +1020,15 @@
         </div>
     </section>
 
-    <!-- Footer block -->
+    <!-- FOOTER -->
     <footer class="py-12 border-t border-zinc-900 bg-black">
         <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
             <div class="space-y-1 text-center md:text-left">
                 <p class="text-zinc-500 text-xs">&copy; 2026 Yared Teshome. All rights reserved globally.</p>
-                <p class="text-zinc-600 text-[10px] font-mono">Engineered using cognitive systems integration & Vercel deployment architectures.</p>
+                <p class="text-zinc-600 text-[9px] font-mono">Engineered using cognitive systems integration & Vercel deployment architectures.</p>
             </div>
             
-            <div class="flex space-x-6 text-zinc-400 text-xs">
+            <div class="flex space-x-6 text-zinc-400 text-xs font-mono">
                 <a href="#" class="hover:text-white transition-colors">GitHub</a>
                 <a href="#" class="hover:text-white transition-colors">LinkedIn</a>
                 <a href="#" class="hover:text-white transition-colors">X (Twitter)</a>
@@ -947,7 +1047,7 @@
             - Typical Rates: Starts at $5,000 project minimums. Retainer advisory services starts from $3,500/month.
             - Location: Addis Ababa, Ethiopia (GMT+3). Highly responsive to US, EU, and African operational time zones.
             Guidelines:
-            - Sound exceptionally professional, highly analytical, encouraging, and clear.
+            - Sound exceptionally professional, highly analytical, encouraging, and clear. Avoid fluffy talk.
             - Act directly as his agent counterpart.
             - Push clients toward booking a strategic slots using the contact form at the bottom of the page.
         `;
@@ -1027,7 +1127,7 @@ def orchestrate(state: StateMap) -> UpdateDict:
             // Remove active classes
             document.querySelectorAll('.blueprint-node').forEach(node => {
                 node.classList.remove('active');
-                node.querySelector('rect').setAttribute('stroke', '#27272a');
+                node.querySelector('rect').setAttribute('stroke', '#1f1f23');
                 node.querySelector('rect').setAttribute('stroke-width', '1.5');
             });
 
@@ -1111,12 +1211,12 @@ def orchestrate(state: StateMap) -> UpdateDict:
             const panelAge = document.getElementById('panel-agent');
 
             if (tabName === 'optimize') {
-                tabOpt.className = "px-4 py-2 rounded-md font-semibold transition-all bg-indigo-600 text-white flex items-center gap-2";
+                tabOpt.className = "px-4 py-2 rounded-md font-semibold transition-all bg-violet-600 text-white flex items-center gap-2";
                 tabAge.className = "px-4 py-2 rounded-md font-semibold transition-all text-zinc-400 hover:text-zinc-200 flex items-center gap-2";
                 panelOpt.classList.remove('hidden');
                 panelAge.classList.add('hidden');
             } else {
-                tabAge.className = "px-4 py-2 rounded-md font-semibold transition-all bg-indigo-600 text-white flex items-center gap-2";
+                tabAge.className = "px-4 py-2 rounded-md font-semibold transition-all bg-violet-600 text-white flex items-center gap-2";
                 tabOpt.className = "px-4 py-2 rounded-md font-semibold transition-all text-zinc-400 hover:text-zinc-200 flex items-center gap-2";
                 panelAge.classList.remove('hidden');
                 panelOpt.classList.add('hidden');
@@ -1456,7 +1556,7 @@ I highly recommend detailing your goals in the **Inquiry Form** at the bottom of
                 <div class="text-zinc-300 bg-zinc-900 border border-zinc-800 p-3 rounded-lg max-w-[85%] text-right font-mono">
                     ${queryText}
                 </div>
-                <div class="flex-shrink-0 w-6 h-6 rounded bg-zinc-800 border border-zinc-700 text-zinc-300 flex items-center justify-center font-bold">U</div>
+                <div class="flex-shrink-0 w-6 h-6 rounded bg-zinc-800 border border-zinc-700 text-zinc-300 flex items-center justify-center font-bold text-[9px]">U</div>
             `;
             thread.appendChild(userMsg);
             thread.scrollTop = thread.scrollHeight;
@@ -1483,12 +1583,12 @@ I highly recommend detailing your goals in the **Inquiry Form** at the bottom of
                 // Formats thinking tag block visually
                 const formattedResult = result.replace(
                     /<thinking>([\s\S]*?)<\/thinking>/g, 
-                    '<div class="thought-process text-zinc-500 italic p-3 rounded border border-zinc-900 mb-3 block"><span class="text-indigo-400 not-italic font-bold tracking-widest text-[9px] uppercase block mb-1">🧠 Cognitive Reasoning Chain:</span>$1</div>'
+                    '<div class="thought-process text-zinc-500 italic p-3 rounded border border-zinc-900 mb-3 block"><span class="text-violet-400 not-italic font-bold tracking-widest text-[9px] uppercase block mb-1">🧠 Cognitive Reasoning Chain:</span>$1</div>'
                 );
 
                 agentMsg.innerHTML = `
-                    <div class="flex-shrink-0 w-6 h-6 rounded bg-indigo-950 border border-indigo-800 text-indigo-400 flex items-center justify-center font-bold">AI</div>
-                    <div class="text-zinc-300 bg-indigo-950/20 border border-indigo-900/30 p-3 rounded-lg max-w-[85%] whitespace-pre-wrap font-mono">
+                    <div class="flex-shrink-0 w-6 h-6 rounded bg-violet-950/50 border border-violet-850 text-violet-400 flex items-center justify-center font-bold text-[9px]">AI</div>
+                    <div class="text-zinc-300 bg-violet-950/20 border border-zinc-900/30 p-3 rounded-lg max-w-[85%] whitespace-pre-wrap font-mono">
                         ${formattedResult}
                     </div>
                 `;
@@ -1501,7 +1601,7 @@ I highly recommend detailing your goals in the **Inquiry Form** at the bottom of
                 const errMsg = document.createElement('div');
                 errMsg.className = "flex gap-3 mt-4";
                 errMsg.innerHTML = `
-                    <div class="flex-shrink-0 w-6 h-6 rounded bg-red-950 border border-red-800 text-red-400 flex items-center justify-center font-bold">✕</div>
+                    <div class="flex-shrink-0 w-6 h-6 rounded bg-red-950 border border-red-800 text-red-400 flex items-center justify-center font-bold text-[9px]">✕</div>
                     <div class="text-red-300 bg-red-950/20 border border-red-900/30 p-3 rounded-lg max-w-[85%]">
                         API request encountered issues. Ensure your Gemini credential is valid.
                     </div>
@@ -1549,8 +1649,8 @@ I highly recommend detailing your goals in the **Inquiry Form** at the bottom of
                         {
                             label: 'Optimized System Architectures (%)',
                             data: [10, 18, 40], // Represents a 90% cost drop, 82% time reduction, 60% workload drop
-                            backgroundColor: '#6366f1',
-                            borderColor: '#818cf8',
+                            backgroundColor: '#8b5cf6',
+                            borderColor: '#a78bfa',
                             borderWidth: 1,
                             borderRadius: 6
                         }
@@ -1605,7 +1705,7 @@ I highly recommend detailing your goals in the **Inquiry Form** at the bottom of
 
             setTimeout(() => {
                 btn.innerHTML = "✓ Inquiry Submitted. Locked in Space.";
-                btn.className = "w-full py-4.5 bg-emerald-600 text-white font-bold rounded-xl transition-all shadow-xl shadow-emerald-500/20 text-sm";
+                btn.className = "w-full py-4.5 bg-emerald-650 text-white font-bold rounded-xl transition-all shadow-xl shadow-emerald-500/20 text-xs tracking-wider uppercase";
                 showToastMessage("Project parameters received! Yared will respond personally within 24 hours.", "💼");
                 
                 // Clear input fields
